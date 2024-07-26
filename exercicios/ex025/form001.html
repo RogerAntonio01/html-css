@@ -8,14 +8,47 @@
         * {
             font-family: Arial, Helvetica, sans-serif;
         }
+       
+        li {
+            text-align: left;
+            text-indent: 10px;
+            padding: 0px 40px 0px 0px;
+            margin: auto;
+        }
+    
     </style>
 </head>
 <body>
     <h1>Meu primeiro formulario</h1>
-    <form action="cadastro.php" autocomplete="off">
+    <!-- Metodo GET os dados sao visiveis, no POST não mais ainda tem geito der ver pelo html -->
+    <form action="cadastro.php"  method="get" autocomplete="off">
+        <!-- Label faz a relaçao entre o formulario e a etiqueta dele o ID a maioria das vezes  -->
         <p><label for="inome">Nome:</label> <input type="text" name="nome" id="inome"></p>
         <p><label for="isobrenome">Sobrenome:</label> <input type="text" name="sobrenome" id="isobrenome"></p>
         <p><input type="submit" value="Enviar"></p>
+        <p>
+            <ul type="square">
+                <br>
+                    <li><strong>Dados Visíveis:</strong> No método GET, os dados são anexados à URL e são visíveis no histórico do navegador e nos logs do servidor. No método POST, os dados são enviados no corpo da solicitação e não são facilmente visíveis.</li>
+                </br>
+                <br>
+                    <li><strong>Segurança:</strong> Como os dados GET são visíveis na URL, ele é menos seguro comparado ao POST. Portanto, GET não deve ser usado para enviar informações sensíveis, como senhas.</li>
+                </br>
+                <br>
+                    <li><strong>Tamanho dos Dados:</strong> GET tem limitações de tamanho (dependendo do navegador, geralmente cerca de 2KB). POST não tem limitação de tamanho e pode enviar uma grande quantidade de dados.</li>
+                </br>
+                <br>
+                    <li><strong>Tipo de Dados:</strong> GET só pode enviar dados ASCII, enquanto POST pode enviar qualquer tipo de dados, como binário e ASCII.</li>
+                </br>
+                <br>
+                    <li><strong>Operações:</strong> GET é idempotente, o que significa que fazer a mesma solicitação GET várias vezes resultará na mesma resposta todas as vezes. POST não é idempotente e pode resultar em diferentes respostas.</li>
+                </br>
+                <br>
+                    <li><strong>Favoritos e Atualizações:</strong> As solicitações GET podem ser marcadas como favoritas e podem ser atualizadas sem qualquer aviso. As solicitações POST não podem ser marcadas como favoritas e o navegador sempre alerta o usuário se uma solicitação POST está prestes a ser reenviada.</li>
+                </br>
+            </ul>
+        </p>
+
     </form>
 </body>
 </html>
