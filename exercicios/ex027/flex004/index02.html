@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justify Content</title>
+    <style>
+        .container {
+            display: flex;
+           
+            border: 1px solid #000;
+            margin-bottom: 20px;
+            align-items: center;
+            position: relative;
+        }
+        .item {
+            width: 150px;
+            height: 50px;
+            background-color: rgb(141, 202, 223);
+            margin: 5px;
+        }
+        .label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .axis {
+            position: absolute;
+            font-size: 12px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        .main-axis {
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: blue;
+        }
+        .cross-axis {
+            right: -60px;
+            top: 50%;
+            transform: translateY(-50%) rotate(90deg);
+            color: red;
+        }
+        .direction {
+            position: absolute;
+            font-size: 10px;
+            font-weight: bold;
+        }
+        .main-direction {
+            top: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: blue;
+        }
+        .cross-direction {
+            right: -75px;
+            top: 50%;
+            transform: translateY(-50%) rotate(90deg);
+            color: red;
+        }
+        .description {
+            margin-bottom: 5px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="label">flex-start</div>
+    <div class="description">Os itens são alinhados ao início do contêiner.</div><br>
+    <div class="container" style="justify-content: flex-start;">
+        <div class="axis main-axis">Main Axis</div>
+        <div class="direction main-direction">(left to right)</div>
+        <div class="axis cross-axis">Cross Axis</div>
+        <div class="direction cross-direction">(top to bottom)</div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    
+    <div class="label">flex-end</div>
+    <div class="description">Os itens são alinhados ao final do contêiner.</div>
+    <div class="container" style="justify-content: flex-end;">
+        <div class="axis main-axis">Main Axis</div>
+        <div class="direction main-direction">(left to right)</div>
+        <div class="axis cross-axis">Cross Axis</div>
+        <div class="direction cross-direction">(top to bottom)</div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    
+    <div class="label">center</div>
+    <div class="description">Os itens são centralizados no contêiner.</div>
+    <div class="container" style="justify-content: center;">
+        <div class="axis main-axis">Main Axis</div>
+        <div class="direction main-direction">(left to right)</div>
+        <div class="axis cross-axis">Cross Axis</div>
+        <div class="direction cross-direction">(top to bottom)</div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    
+    <div class="label">space-between</div>
+    <div class="description">Os itens são distribuídos com espaço igual entre eles.</div>
+    <div class="container" style="justify-content: space-between;">
+        <div class="axis main-axis">Main Axis</div>
+        <div class="direction main-direction">(left to right)</div>
+        <div class="axis cross-axis">Cross Axis</div>
+        <div class="direction cross-direction">(top to bottom)</div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    
+    <div class="label">space-around</div>
+    <div class="description">Os itens são distribuídos com espaço igual ao redor de cada item.</div>
+    <div class="container" style="justify-content: space-around;">
+        <div class="axis main-axis">Main Axis</div>
+        <div class="direction main-direction">(left to right)</div>
+        <div class="axis cross-axis">Cross Axis</div>
+        <div class="direction cross-direction">(top to bottom)</div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        
+    </div>
+    
+    <div class="label">space-evenly</div>
+    <div class="description">Os itens são distribuídos com espaço igual ao <br> redor de cada item, incluindo as extremidades.</div>
+    <div class="container" style="justify-content: space-evenly;">
+        <div class="axis main-axis">Main Axis</div>
+        <div class="direction main-direction">(left to right)</div>
+        <div class="axis cross-axis">Cross Axis</div>
+        <div class="direction cross-direction">(top to bottom)</div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</body>
+</html>

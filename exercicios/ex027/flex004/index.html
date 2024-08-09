@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box 04</title>
+    <style>
+        div.container {
+            background-color: rgb(167, 167, 167);
+            height: 300px;
+            display: flex;
+            flex-flow: row nowrap;/* forma de linha sem quebra */
+            justify-content: space-evenly; /* Vai fazer o alinhamento em relação ao main-axis(eixo principal) */
+            align-items: stretch;/* estica para fazer ocupar o tamenho inteiro do strecheh */
+        }
+
+        div.item {
+            background-color: rgb(81, 181, 214);
+            width: 50px;
+            border: 1px solid black;
+            text-align: center;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+</body>
+</html>

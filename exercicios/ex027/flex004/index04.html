@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Flow e Justify Content</title>
+    <style>
+        .container {
+            display: flex;
+          
+            border: 1px solid #000;
+            margin-bottom: 20px;
+            align-items: center;
+            position: relative;
+        }
+        .item {
+            width: 150px;
+            height: 50px;
+            background-color: lightblue;
+            margin: 5px;
+        }
+        .label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .description {
+            margin-bottom: 5px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="label">row nowrap + flex-start</div>
+    <div class="description">Os itens são dispostos em uma linha única, alinhados ao início do contêiner.</div>
+    <div class="container" style="flex-flow: row nowrap; justify-content: flex-start;">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    
+    <div class="label">row wrap + center</div>
+    <div class="description">Os itens são dispostos em várias linhas, centralizados no contêiner.</div>
+    <div class="container" style="flex-flow: row wrap; justify-content: center;">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    
+    <div class="label">row wrap-reverse + space-between</div>
+    <div class="description">Os itens são dispostos em várias linhas, quebrando conforme necessário, com espaço igual entre eles.</div>
+    <div class="container" style="flex-flow: row wrap-reverse; justify-content: space-between;">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    
+    <div class="label">column nowrap + flex-end</div>
+    <div class="description">Os itens são dispostos em uma coluna única, alinhados ao final do contêiner.</div>
+    <div class="container" style="flex-flow: column nowrap; justify-content: flex-end;">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    
+    <div class="label">column wrap + space-around</div>
+    <div class="description">Os itens são dispostos em várias colunas, quebrando conforme necessário, com espaço igual ao redor de cada item.</div>
+    <div class="container" style="flex-flow: column wrap; justify-content: space-around;">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    
+    <div class="label">column wrap-reverse + space-evenly</div>
+    <div class="description">Os itens são dispostos em várias colunas, quebrando conforme necessário, com espaço igual ao redor de cada item, incluindo as extremidades.</div>
+    <div class="container" style="flex-flow: column wrap-reverse; justify-content: space-evenly;">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</body>
+</html>
