@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        div.container {
+            background-color: lightgray;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: stretch; /* ja vem com stretch configurado como padrão */
+            height:  400px;
+        }
+
+        div.item {
+            background-color: lightblue;
+            border: 1x solid black;
+            text-align: center;
+            padding: 20px;
+        }
+
+        div#i1{
+             /* se nao tem nada configurado no align-self ele deixa o valor do align-items como padrao */
+        }
+
+        div#i2{
+            align-self: auto;
+        }
+
+        div#i3{
+            align-self: flex-end;
+        }
+
+        div#i4{
+            align-self: stretch;
+        }
+
+        div#i5{
+            align-self: center;
+        }
+
+        div#i6{
+            align-self: flex-start;
+        }
+
+        div#i7{
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item" id="i1">A</div>
+        <div class="item" id="i2">B</div>
+        <div class="item" id="i3">C</div>
+        <div class="item" id="i4">D</div>
+        <div class="item" id="i5">E</div>
+        <div class="item" id="i6">F</div>
+        <div class="item" id="i7">G</div>
+    </div>
+</body>
+</html>
